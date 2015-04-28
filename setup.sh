@@ -1,7 +1,14 @@
 #!/bin/bash
 # setup new machine
-# this assumes the installation and acceptance of t&cs for Xcode
+# this script assumes the installation and acceptance of t&cs for Xcode
+# this script assumes the download of Xcode's Command Line Tools
 
+echo
+echo 'Install Xcode Developer Tools'
+echo
+sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
+echo
+echo 'Xcode Developer Tools are ready'
 echo
 echo 'Download Homebrew'
 echo
@@ -15,17 +22,35 @@ brew install git
 echo
 echo 'Git is ready'
 echo
-echo 'Installing Ruby'
+echo 'Installing RVM'
 echo
 curl -L get.rvm.io | rvm_tar_command=tar bash -s stable --ruby
 echo
+echo 'RVM is ready'
+echo
+echo 'Installing Ruby'
+echo
+rvm install 1.9.3
+echo
 echo 'Ruby is ready'
+echo
+echo 'Installing Rails'
+echo
+gem install rails -v 4.2.0
+echo
+echo 'Rails is ready'
 echo
 echo 'Installing Groovy'
 echo
 brew install groovy
 echo
 echo 'Groovy is ready'
+echo
+echo 'Installing Grails'
+echo
+brew install grails
+echo
+echo 'Grails is ready'
 echo
 echo 'Installing Python'
 echo
@@ -38,18 +63,6 @@ echo
 brew install scala
 echo
 echo 'Scala is ready'
-echo
-echo 'Installing Rails'
-echo
-brew install rails
-echo
-echo 'Rails is ready'
-echo
-echo 'Installing Grails'
-echo
-brew install grails
-echo
-echo 'Grails is ready'
 echo
 echo 'Installing Mongo DB'
 echo

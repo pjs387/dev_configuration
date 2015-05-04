@@ -100,6 +100,12 @@ brew install elasticsearch
 echo
 echo 'ElasticSearch is ready'
 echo
+echo 'Installing Grunt CLI'
+echo 
+npm install -g grunt-cli
+echo
+echo 'Grunt CLI is ready'
+echo
 echo 'Check System Configuration'
 echo
 brew doctor
